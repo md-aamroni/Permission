@@ -1,0 +1,49 @@
+{
+    "name": "aamroni/permission",
+    "description": "Generating RSA key pairs for microservice authentication in Laravel",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Aamroni\\Permission\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "md-aamroni",
+            "email": "md.aamroni@gmail.com",
+            "role": "Software Developer | Tech Enthusiast"
+        }
+    ],
+    "require": {
+        "php": ">=8.3",
+        "ext-openssl": "*",
+        "firebase/php-jwt": "^6.10"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.15",
+        "pestphp/pest": "^2.34"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Aamroni\\Permission\\Providers\\PermissionServiceProvider"
+            ],
+            "aliases": {
+                "Signature": "Aamroni\\Permission\\Facades\\Permission"
+            }
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
